@@ -459,7 +459,9 @@ td button:last-child {
 .dark-mode .header p {
   color: #9ca3af;
 }
-
+.dark-mode .header h1{
+  color: white;
+}
 .dark-mode .stat-card,
 .dark-mode .tasks-section {
   background: #1f2937;
