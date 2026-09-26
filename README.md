@@ -2,6 +2,9 @@
 
 A full-stack task management dashboard built with React, Node.js, Express, and SQLite.
 
+## Deploy
+https://task-dashboard-eight-pi.vercel.app/
+
 ## Features
 
 - Add new tasks
