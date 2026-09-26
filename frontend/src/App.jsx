@@ -14,7 +14,7 @@ const [loading, setLoading] = useState(true)
 const [error, setError] = useState("")
 const [darkMode, setDarkMode] = useState(false)
 useEffect(() => {
-  fetch('http://localhost:5050/api/tasks')
+  fetch('https://task-dashboard-backend-1g46.onrender.com/api/tasks')
     .then((response) => response.json())
     .then((data) => {
   setTasks(data)
@@ -27,7 +27,7 @@ useEffect(() => {
 })
 }, [])
 const addTask = () => {
-  fetch("http://localhost:5050/api/tasks", {
+  fetch("https://task-dashboard-backend-1g46.onrender.com/api/tasks", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -56,7 +56,7 @@ const updateTaskStatus = (task) => {
   const newStatus =
     task.status === "Completed" ? "Pending" : "Completed";
 
-  fetch(`http://localhost:5050/api/tasks/${task.id}`, {
+    fetch(`https://task-dashboard-backend-1g46.onrender.com/api/tasks/${task.id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -80,7 +80,7 @@ const updateTaskStatus = (task) => {
     });
 };
 const deleteTask = (id) => {
-  fetch(`http://localhost:5050/api/tasks/${id}`, {
+  fetch(`https://task-dashboard-backend-1g46.onrender.com/api/tasks/${id}`, {
     method: "DELETE",
   })
     .then((response) => response.json())
@@ -100,7 +100,7 @@ const editTask = (task) => {
   setShowModal(true);
 };
 const saveEdit = () => {
-  fetch(`http://localhost:5050/api/tasks/edit/${editingTask.id}`, {
+  fetch(`https://task-dashboard-backend-1g46.onrender.com/api/tasks/edit/${editingTask.id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
